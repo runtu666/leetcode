@@ -1,5 +1,7 @@
 package main
 
+import . "leetcode/common"
+
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -8,12 +10,6 @@ package main
  *     Right *TreeNode
  * }
  */
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 func increasingBST(root *TreeNode) *TreeNode {
 	var sort = new(TreeNode)

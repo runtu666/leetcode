@@ -1,8 +1,6 @@
 package main
 
-import (
-	. "leetcode/common"
-)
+import . "leetcode/common"
 
 /**
 给定二叉搜索树的根结点root，返回值位于范围 [low, high] 之间的所有结点的值的和。

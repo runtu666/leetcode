@@ -1,16 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	. "leetcode/common"
+)
 
 /**
 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
 */
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 var rs = make([]int, 0)
 
