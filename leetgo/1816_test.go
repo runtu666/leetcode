@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"testing"
 )
 
 /*
@@ -38,7 +39,7 @@ s 中的单词为 ["What", "is" "the", "solution", "to", "this", "problem"]
 链接：https://leetcode-cn.com/problems/truncate-sentence
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test1816(t *testing.T) {
 	s := "What is the solution to this problem"
 	k := 4
 	fmt.Println(truncateSentence(s, k))

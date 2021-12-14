@@ -1,8 +1,11 @@
 package main
 
-import . "leetcode/common"
+import (
+	. "leetcode/common"
+	"testing"
+)
 
-func main() {
+func Test230(t *testing.T) {
 
 }
 

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄。他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。
@@ -35,7 +38,7 @@ import "fmt"
 链接：https://leetcode-cn.com/problems/teemo-attacking
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test495(t *testing.T) {
 	fmt.Println(findPoisonedDuration([]int{1, 2}, 2))
 }
 

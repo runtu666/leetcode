@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 771. 宝石与石头
@@ -38,7 +41,7 @@ func numJewelsInStones(jewels string, stones string) int {
 	return cnt
 }
 
-func main() {
+func Test711(t *testing.T) {
 	j := "aA"
 	s := "aAAbbbbas"
 	fmt.Println(numJewelsInStones(j, s))

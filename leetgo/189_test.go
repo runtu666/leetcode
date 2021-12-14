@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
@@ -32,7 +35,7 @@ import "fmt"
 链接：https://leetcode-cn.com/problems/rotate-array
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test189(t *testing.T) {
 	var arr = []int{1, 2, 3, 4, 5, 6, 7}
 	rotate(arr, 3)
 }

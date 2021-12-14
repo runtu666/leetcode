@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"testing"
 )
 
 /**
@@ -31,7 +32,7 @@ import (
 你可以假设 pattern 只包含小写字母， str 包含了由单个空格分隔的小写字母。
 */
 
-func main() {
+func Test290(t *testing.T) {
 	fmt.Println(wordPattern("abba", "dog cat cat dog"))
 }
 

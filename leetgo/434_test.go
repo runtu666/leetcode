@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"testing"
 )
 
 /*
@@ -20,7 +21,7 @@ import (
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 */
-func main() {
+func Test434(t *testing.T) {
 	segments := countSegments("ggg   lgg")
 	fmt.Println(segments)
 }

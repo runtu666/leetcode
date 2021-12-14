@@ -1,6 +1,9 @@
 package main
 
-import . "leetcode/common"
+import (
+	. "leetcode/common"
+	"testing"
+)
 
 /**
  * Definition for a binary tree node.
@@ -64,6 +67,6 @@ func Insert(nd, newNode *TreeNode) {
 		}
 	}
 }
-func main() {
+func Test897(t *testing.T) {
 	increasingBST(buildTree())
 }

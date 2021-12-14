@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"testing"
 )
 
 /**
@@ -58,7 +59,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	return res
 }
 
-func main() {
+func Test2(t *testing.T) {
 	l1 := ListNode{
 		Next: &ListNode{
 			Next: &ListNode{

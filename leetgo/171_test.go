@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回该列名称对应的列序号。
@@ -22,7 +25,7 @@ import "fmt"
 链接：https://leetcode-cn.com/problems/excel-sheet-column-number
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test171(t *testing.T) {
 	columnTitle := "FXSHRXW"
 	fmt.Println(titleToNumber(columnTitle))
 }

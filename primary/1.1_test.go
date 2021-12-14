@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
@@ -23,7 +26,7 @@ import "fmt"
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 */
 
-func main() {
+func Test1_1(t *testing.T) {
 	var nums = []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 	fmt.Println(removeDuplicates(nums))
 }

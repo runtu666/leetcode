@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 已知函数signFunc(x) 将会根据 x 的正负返回特定值：
@@ -48,7 +51,7 @@ func arraySign(nums []int) int {
 	return 1
 }
 
-func main() {
+func Test1822(t *testing.T) {
 	nums := []int{-1, -2, -3, -4, 3, 2, 1}
 	fmt.Println(arraySign(nums))
 }

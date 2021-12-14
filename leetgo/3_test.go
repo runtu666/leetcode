@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 给定一个字符串 s ，请你找出其中不含有重复字符的最长子串的长度。
@@ -54,6 +57,6 @@ func lengthOfLongestSubstring(s string) int {
 	return max
 }
 
-func main() {
+func Test3(t *testing.T) {
 	fmt.Println(lengthOfLongestSubstring("dvdf"))
 }

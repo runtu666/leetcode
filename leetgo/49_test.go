@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+	"testing"
 )
 
 /**
@@ -56,6 +57,6 @@ func getStrSort(str string) string {
 	return strings.Join(newStrList, "")
 }
 
-func main() {
+func Test49(t *testing.T) {
 	fmt.Println(groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
 }

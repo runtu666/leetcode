@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"testing"
 )
 
 /**
@@ -48,6 +49,6 @@ func judgeSquareSum(c int) bool {
 	return false
 }
 
-func main() {
+func Test633(t *testing.T) {
 	fmt.Println(judgeSquareSum(4))
 }

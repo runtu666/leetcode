@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	. "leetcode/common"
+	"testing"
 )
 
 /**
@@ -11,7 +12,7 @@ import (
 
 var rs = make([]int, 0)
 
-func main() {
+func Test94(t *testing.T) {
 	nodeG := TreeNode{Val: 7, Left: nil, Right: nil}
 	nodeF := TreeNode{Val: 6, Left: &nodeG, Right: nil}
 	nodeE := TreeNode{Val: 5, Left: nil, Right: nil}

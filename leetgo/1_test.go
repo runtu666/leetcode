@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 1. 两数之和
@@ -30,6 +33,6 @@ func twoSum(nums []int, target int) []int {
 	return res
 }
 
-func main() {
+func Test1(t *testing.T) {
 	fmt.Println(twoSum([]int{2, 7, 11, 15}, 9))
 }

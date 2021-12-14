@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：
@@ -32,7 +35,7 @@ n == matrix[i].length
 链接：https://leetcode-cn.com/problems/search-a-2d-matrix-ii
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test240(t *testing.T) {
 	var matrix = make([][]int, 0)
 	matrix = append(matrix, []int{1, 4, 7, 11, 15})
 	matrix = append(matrix, []int{2, 5, 8, 12, 19})

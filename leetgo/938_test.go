@@ -1,6 +1,9 @@
 package main
 
-import . "leetcode/common"
+import (
+	. "leetcode/common"
+	"testing"
+)
 
 /**
 给定二叉搜索树的根结点root，返回值位于范围 [low, high] 之间的所有结点的值的和。
@@ -24,7 +27,7 @@ import . "leetcode/common"
 链接：https://leetcode-cn.com/problems/range-sum-of-bst
 */
 
-func main() {
+func Test938(t *testing.T) {
 	tree := BuildTree([]int{10, 5, 15, 3, 7, 0, 18})
 	rangeSumBST(tree, 7, 15)
 }

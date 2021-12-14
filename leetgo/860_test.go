@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 860. 柠檬水找零
@@ -13,7 +16,7 @@ import "fmt"
 链接：https://leetcode-cn.com/problems/lemonade-change
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func main() {
+func Test860(t *testing.T) {
 	fmt.Println(lemonadeChange([]int{5, 5, 5, 10, 20}))
 }
 

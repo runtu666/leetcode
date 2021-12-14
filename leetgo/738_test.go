@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"testing"
 )
 
 /**
@@ -45,6 +46,6 @@ func monotoneIncreasingDigits(n int) int {
 	return ans
 }
 
-func main() {
+func Test738(t *testing.T) {
 	fmt.Println(monotoneIncreasingDigits(10))
 }
