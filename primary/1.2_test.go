@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -36,41 +35,26 @@ import (
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 */
 func Test1_2(t *testing.T) {
-	fmt.Println(maxProfit([]int{5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0}))
+	t.Log(maxProfit([]int{7, 1, 5, 3, 6, 4}))
 }
 
 func maxProfit(prices []int) int {
-	if len(prices) <= 1 {
+	l := len(prices)
+	if l < 2 {
 		return 0
 	}
-	var sum = 0
-	var s = 0
-	var sf bool
-	for i, l := 0, len(prices); i < l; i++ {
-		if i == 0 {
-			if prices[i] < prices[i+1] {
-				s = prices[i]
-				sf = true
-			}
-			continue
-		}
-		if i == l-1 {
-			if sf {
-				sum += prices[i] - s
-				s = 0
-			}
-			continue
-		}
-		if prices[i] <= prices[i-1] && prices[i] < prices[i+1] && !sf {
-			s = prices[i]
-			sf = true
-		}
-		if prices[i] > prices[i-1] && prices[i] >= prices[i+1] && sf {
-			sum += prices[i] - s
-			sf = false
-			s = 0
-		}
-
+	free := 0          //手上无股票的利润
+	hold := -prices[0] //手上有股票的利润
+	for i := 1; i < l; i++ {
+		free = max(free, hold+prices[i])
+		hold = max(hold, free-prices[i])
 	}
-	return sum
+	return free
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
