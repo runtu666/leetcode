@@ -33,9 +33,9 @@ type Pos struct {
 	column int
 }
 
-var moves = []Pos{{1, 2}, {1, -2}, {2, 1}, {2, -1}, {-1, 2}, {-1, -2}, {-2, 1}, {-2, -1}}
-
 func knightProbability(n, k, row, column int) float64 {
+	var moves = []Pos{{1, 2}, {1, -2}, {2, 1}, {2, -1}, {-1, 2}, {-1, -2}, {-2, 1}, {-2, -1}}
+
 	dp := make([][][]float64, k+1)
 	for step := range dp {
 		dp[step] = make([][]float64, n)
