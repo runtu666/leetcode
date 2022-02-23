@@ -2,6 +2,7 @@ package main
 
 import (
 	"math"
+	"strings"
 	"testing"
 )
 
@@ -28,52 +29,40 @@ import (
 */
 func Test2_6(t *testing.T) {
 	t.Log(myAtoi("a   -42"))
+	t.Log(myAtoi("  -42"))
+	t.Log(myAtoi("-91283472332"))
 }
 
 func myAtoi(s string) int {
-	var isBlow = false
-	var isBegin = false
-	var n []byte
-	for _, x := range s {
-		if x == '-' {
-			if isBegin {
-				break
-			}
-			isBlow = true
-			continue
-		}
-		if x == '+' {
-			if isBegin {
-				break
-			}
-			continue
-		}
-		if x == '0' {
-			if isBegin {
-				n = append(n, byte(x))
-			}
-			continue
-		}
-		if (x < '0' || x > '9') && x != '-' && x != '+' {
-			if isBegin {
-				break
-			}
-			if x != ' ' {
-				break
-			}
-			continue
-		}
-		isBegin = true
-		n = append(n, byte(x))
+	s = strings.TrimSpace(s)
+	if len(s) == 0 {
+		return 0
 	}
-	var l = len(n)
-	var sum int32 = 0
-	for i, v := range n {
-		x := int32(v) % '0'
-		sum += x * int32(math.Pow10(l-1-i))
+	var index = 0
+	var flag = 1
+	var l = len(s)
+	var digital = 0
+	if s[index] == '+' || s[index] == '-' {
+		if s[index] == '-' {
+			flag = -1
+		}
+		index++
 	}
-	if isBlow {
-		return int(0 - sum)
+	for ; index < l; index++ {
+		var num = s[index] - '0'
+		if num < 0 || num > 9 {
+			break
+		}
+		digital = digital*10 + int(num)
+		if digital > math.MaxInt32 {
+			if flag < 0 {
+				return math.MinInt32
+			}
+			return math.MaxInt32
+		}
 	}
-	return int(sum)
+	if flag < 0 {
+		return 0 - digital
+	}
+	return digital
 }
