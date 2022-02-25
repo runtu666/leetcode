@@ -1,14 +1,12 @@
 package main
 
-import "testing"
+import (
+	. "leetcode/common"
+	"testing"
+)
 
 func Test3_1(t *testing.T) {
 
-}
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
 }
 
 func deleteNode(node *ListNode) {
