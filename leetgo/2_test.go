@@ -4,6 +4,8 @@ import (
 	"fmt"
 	. "leetcode/common"
 	"testing"
+
+	. "leetcode/common"
 )
 
 /**
