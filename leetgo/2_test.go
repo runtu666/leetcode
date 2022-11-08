@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	. "leetcode/common"
 	"testing"
 )
 
@@ -18,11 +19,6 @@ import (
 原因：342 + 465 = 807
 链接：https://leetcode-cn.com/problems/add-two-numbers/
 */
-
-type ListNode struct {
-	Next *ListNode
-	Val  int
-}
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var tail, res *ListNode
