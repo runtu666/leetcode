@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
-/**
+/*
+*
 给定一个数组，将数组中的元素向右移动k个位置，其中k是非负数。
-
-
 
 进阶：
 
@@ -45,6 +43,5 @@ func rotate(nums []int, k int) {
 	i := k % length
 	start := length - i
 	newNums := append(nums[start:length], nums[0:start]...)
-	fmt.Println(nums)
 	copy(nums, newNums)
 }
