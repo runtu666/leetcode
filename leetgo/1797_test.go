@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -23,23 +22,23 @@ func Constructor1797(timeToLive int) AuthenticationManager {
 
 func (this *AuthenticationManager) Generate(tokenId string, currentTime int) {
 	this.TokenExpireMap[tokenId] = currentTime + this.TimeToLive
-	fmt.Println(this.TokenExpireMap)
 }
 
 func (this *AuthenticationManager) Renew(tokenId string, currentTime int) {
-	if expire, ok := this.TokenExpireMap[tokenId]; !ok || expire < currentTime {
-		fmt.Println(this.TokenExpireMap)
+	if expire, ok := this.TokenExpireMap[tokenId]; !ok || expire <= currentTime {
+		delete(this.TokenExpireMap, tokenId)
 		return
 	}
 	this.TokenExpireMap[tokenId] = currentTime + this.TimeToLive
-	fmt.Println(this.TokenExpireMap)
 }
 
 func (this *AuthenticationManager) CountUnexpiredTokens(currentTime int) int {
 	var cnt int
-	for _, expire := range this.TokenExpireMap {
+	for tokenId, expire := range this.TokenExpireMap {
 		if expire > currentTime {
 			cnt++
+		} else {
+			delete(this.TokenExpireMap, tokenId)
 		}
 	}
 	return cnt
